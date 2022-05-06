@@ -59,15 +59,15 @@
       </div>
       <!-- End Hero section -->
 
-      <!-- Form Modal -->
+      <!-- Modal -->
       <div class="bground">
         <div class="content">
           <!-- Button close -->
           <span class="close" id="closeModal"></span>
 
-          <!-- Form -->
           <div class="modal-body">
-            <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
+            <!-- Form -->
+            <form class="block" name="reserve" action="index.html" method="get" onsubmit="return validate();">
 
               <!-- Firstname input -->
               <div class="formData">
@@ -147,10 +147,21 @@
               <!-- Submit Button -->
               <input class="btn-submit" type="submit" class="button" value="C'est parti" />
             </form>
+            <!-- End Form -->
+
+            <!-- Congrats section -->
+            <div class="congrats-container hidden">
+              <div class="congrats-text">
+                <p>Merci !</p>
+                <p >Votre réservation a été reçue.</p>
+              </div>
+            </div>
+            <!-- End congrats section -->
           </div>
+
         </div>
       </div>
-      <!-- End Form Modal -->
+      <!-- End Modal -->
     </main>
 
     <footer>
