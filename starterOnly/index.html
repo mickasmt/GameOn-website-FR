@@ -67,36 +67,36 @@
 
           <div class="modal-body">
             <!-- Form -->
-            <form class="block" name="reserve" action="index.html" method="get" onsubmit="return validate();">
+            <form class="block" id="form" name="reserve" action="index.html" method="get">
 
               <!-- Firstname input -->
               <div class="formData">
                 <label for="first">Prénom</label><br>
-                <input class="text-control" type="text" id="first" name="first" minlength="2" /><br>
+                <input class="text-control" type="text" id="first" name="first" minlength="2" required /><br>
               </div>
 
               <!-- Lastname input -->
               <div class="formData">
                 <label for="last">Nom</label><br>
-                <input class="text-control" type="text" id="last" name="last" /><br>
+                <input class="text-control" type="text" id="last" name="last" required /><br>
               </div>
 
               <!-- Email input -->
               <div class="formData">
                 <label for="email">E-mail</label><br>
-                <input class="text-control" type="email" id="email" name="email" /><br>
+                <input class="text-control" type="email" id="email" name="email" required /><br>
               </div>
 
               <!-- Birthdate input -->
               <div class="formData">
                 <label for="birthdate">Date de naissance</label><br>
-                <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+                <input class="text-control" type="date" id="birthdate" name="birthdate" required /><br>
               </div>
 
               <!-- Number input -->
               <div class="formData">
                 <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+                <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required >
               </div>
 
               <!-- Select input -->
@@ -149,14 +149,14 @@
             </form>
             <!-- End Form -->
 
-            <!-- Congrats section -->
-            <div class="congrats-container hidden">
-              <div class="congrats-text">
+            <!-- Success message section -->
+            <div class="success-message hidden" id="successMessage">
+              <div class="success-message__text">
                 <p>Merci !</p>
                 <p >Votre réservation a été reçue.</p>
               </div>
             </div>
-            <!-- End congrats section -->
+            <!-- End success message section -->
           </div>
 
         </div>
@@ -164,12 +164,16 @@
       <!-- End Modal -->
     </main>
 
+    <!-- Footer -->
     <footer>
       <p class="copyrights">
         Copyright 2014 - 2022, GameOn Inc.
       </p>
     </footer>
+    <!-- End Footer -->
     
+    <!-- Scripts -->
+    <script src="./assets/js/form.js"></script>
     <script src="./assets/js/modal.js"></script>
   </body>
 </html>
