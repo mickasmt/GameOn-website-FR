@@ -44,8 +44,12 @@ formElt.addEventListener("submit", formValidation);
 
 // Display success message
 function displaySuccessMessage() {
+  let currentHeightForm = document.querySelectorAll("#form")[0].offsetHeight;
+  
   formElt.classList.replace("block", "hidden");
   successMessageElt.classList.replace("hidden", "flex");
+  successMessageElt.style.minHeight = currentHeightForm +"px";
+
 }
 
 // Clear form after validation form if success
